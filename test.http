@@ -1,0 +1,69 @@
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    
+    "username":"riiishi",
+    "password":"rishi"
+}
+
+
+
+###
+GET http://localhost:5000/api/loggedin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFoYW5hIiwiaWF0IjoxNjI1MTQ1NzQ0LCJleHAiOjE2MjUxNDU4MDR9.AvpPTMONOjozFbn8Kr4jD-nyi8KhBgGwM3UpQv8i0fY
+
+###
+POST http://localhost:5000/api/token
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFoYW5hIiwiaWF0IjoxNjI1MTQ1NjYzfQ.MXAMOI4-lCeYvZDDWlVumnmfL6WZdiMZ5pvJjhadSVk"
+}
+
+###
+POST http://localhost:5000/api/signup
+Content-Type: application/json
+
+{
+    "name":"Ahana Roy",
+    "username" :"ahana",
+    "email":"ahanaroy712@gmail.com",
+    "password":"ahana" 
+}
+
+###
+
+DELETE http://localhost:5000/api/logout
+
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFoYW5hIiwiaWF0IjoxNjI1MTQ1NjYzfQ.MXAMOI4-lCeYvZDDWlVumnmfL6WZdiMZ5pvJjhadSVk"
+}
+
+
+
+###
+POST http://localhost:5000/api/uploadBlog
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJpaWlzaGkiLCJpYXQiOjE2MjUyMDU1MzEsImV4cCI6MTYyNTIwNTU5MX0.uKFw_wJr0YSYVhZg4l9HHnoxvRVjFZcNsqH0bx-8nLk
+
+{
+    "title":"This is second blog",
+    "content":"Hello World 2"
+}
+
+
+###
+
+GET http://localhost:5000/api/seeBlogs
+
+
+###
+
+GET http://localhost:5000/api/seeBlog/60dea7ce6f559325f03dd854
+
+###
+
+GET http://localhost:5000/api/seeBlog/riiishi
